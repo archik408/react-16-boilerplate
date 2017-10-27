@@ -1,0 +1,32 @@
+{
+  "src_folders" : ["./src/__e2e__/tests"],
+  "page_objects_path": "./src/__e2e__/pages",
+  "output_folder" : "coverage",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./lib/selenium-server-standalone.jar",
+    "log_path" : "",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./lib/chromedriver"
+    }
+  },
+
+  "test_settings": {
+    "default": {
+      "globals": {
+        "waitForConditionTimeout": 5000
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome"
+      }
+    },
+    "chrome": {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "react-16-spike",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "0.16.2",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-redux": "5.0.6",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.0.14",
+    "redux": "3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "lab .tests.setup.js src -P '.test' -r console -o stdout -r html -o coverage/report.html -l",
+    "learn": "lab .tests.setup.js src -P '.learn' -r console -o stdout -r html -o coverage/sanity_check.html -l",
+    "e2e": "./node_modules/.bin/nightwatch",
+    "test-all": "npm run learn && npm test && npm run e2e",
+    "doc": "jsdoc src -r -d docs -R README.md -P package.json"
+  },
+  "devDependencies": {
+    "babel-preset-airbnb": "2.4.0",
+    "enzyme": "3.1.0",
+    "enzyme-adapter-react-16": "1.0.1",
+    "jsdoc": "^3.5.5",
+    "lab": "14.3.1",
+    "nightwatch": "^0.9.16",
+    "react-test-renderer": "16.0.0",
+    "soother": "0.0.7"
+  }
+}
